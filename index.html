@@ -4,6 +4,7 @@
 	<meta charset="iso-8859-1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" /> 
 	<title>iFactory Resposivo</title>
+
 	
 
         <style  type="text/css">
@@ -97,6 +98,7 @@
          Conheça a iFactory
    </div>
    <div class="widget-text">
+   
          A iFactory, empresa brasileira especializada em serviços e soluções de TI, completa 10 anos de atuação no Brasil e comemora junto com seus colaboradores, clientes e fornecedores, um período de excelência, inovações e aprendizado.
 Com escritórios em São Paulo, Fortaleza (CE), Quixadá (CE) e Chicago, a companhia que atua globalmente, tem uma previsão de crescer 30% em 2013, através do aumento da gama de serviços prestados em seus clientes atuais, principalmente no segmento de telecomunicações, assim como a consolidação de sua marca no mercado financeiro com a conquista de novos clientes.
    </div>
@@ -130,7 +132,12 @@ Para viabilizar o crescimento, ao longo do ano, a iFactory está negociando uma 
 “Ao longo destes 10 anos, a iFactory tem investido fortemente na utilização de novas tecnologias, buscando sempre aprimorar os projetos de cada cliente. Estamos felizes e esperamos dobrar o tamanho da empresa nos próximos dois anos”, diz Adriano Patrão, sócio-diretor da iFactory.
 Além dos sólidos conhecimentos em soluções de Gestão de Conteúdo e Portais, a iFactory consolidou sua área de implementação de soluções de CRM, agregando novos projetos na tecnologia Microsoft Dynamics.
 No final do ano passado, a empresa fechou importantes contratos, um deles com uma grande empresa da área de Telecomunicações, para reconstrução de seu portal na Internet. A primeira fase do projeto está prevista para ser entregue até o final deste mês.
-      </p>
+      
+	    
+	  </p>
+	  <p>
+	  <canvas id="myChart" width="400" height="400"></canvas>
+	  </p>	 	
       <p> 
        A iFactory é uma das principais integradoras de TI do Brasil. Com operações em São Paulo, Fortaleza (CE), Quixadá (CE) e Chicago, a companhia atua globalmente, oferecendo serviços de fábrica de software, gerenciamento de aplicações, suporte e outsourcing. A missão da iFactory é realizar projetos com alto nível de qualidade, custos e prazos vantajosos para o cliente.
       </p>
@@ -140,6 +147,27 @@ Recentemente, a companhia foi reconhecida pela consultoria norte-americana Great
       </p>
  </div> 
 </div> 
+	<script type"text/javascript" src="Charts.js"></script>
+<script>
+var barChartData = 
+{ 
+ labels : ["January","February","March","April","May","June","July"], 
+ datasets : [ 
+  { 
+   fillColor : "rgba(220,220,220,0.5)", 
+   strokeColor : "rgba(220,220,220,1)", 
+   data : [65,59,90,81,56,55,40] 
+  }, 
+  { 
+   fillColor : "rgba(151,187,205,0.5)", 
+   strokeColor : "rgba(151,187,205,1)", 
+   data : [28,48,40,19,96,27,100] 
+  } 
+ ] 
+}
+
+var myLine = new Chart(document.getElementById("myChart").getContext("2d")).Bar(barChartData);
+</script>
 
 </body>
 </html>
